@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     backgroundColor: Colors.background,
-    padding: 10,
+    padding: 20,
     paddingTop: 35,
   },
   containerIntro: {
@@ -26,7 +26,9 @@ export const styles = StyleSheet.create({
   containerWelcome: {
     display: "flex",
     alignSelf: "flex-start",
+    marginTop: 20,
     paddingTop: 20,
+    paddingBottom: 20,
   },
 });
 

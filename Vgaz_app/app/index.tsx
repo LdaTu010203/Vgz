@@ -28,7 +28,6 @@ const LoadingScreen = () => {
         <Text style={text.title}>VIETGANGZ</Text>
         <Text style={text.infoTitle}>OfficialStore-VIETGANGZ</Text>
         <Text style={text.infoTitle}>IG: vietgangz_original</Text>
-        <Text style={text.infoTitle}>Đợi xíu nhe ní</Text>
       </View>
     );
   } else {

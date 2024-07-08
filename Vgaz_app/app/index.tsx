@@ -37,7 +37,7 @@ const LoadingScreen = () => {
           <Stack.Screen
             name="sign_in"
             component={SignIn}
-            options={{ headerShown: false }}
+            options={{ headerShown: false, headerBackTitleVisible: false }}
           />
         </Stack.Navigator>
       </NavigationContainer>

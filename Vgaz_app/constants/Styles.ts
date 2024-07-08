@@ -25,7 +25,7 @@ export const styles = StyleSheet.create({
   },
   containerWelcome: {
     display: "flex",
-    alignSelf: "flex-start",
+    alignSelf: "center",
     marginTop: 20,
     paddingTop: 20,
     paddingBottom: 20,

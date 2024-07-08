@@ -41,16 +41,16 @@ const SignIn = () => {
           Username Or Email
         </Text>
         <TextInput
-          placeholder="Vietgangz@gmail.com or Vietgangz"
           style={{
-            backgroundColor: Colors.font,
-            color: "black",
+            backgroundColor: "white",
             alignSelf: "stretch",
-            borderRadius: 18,
+            borderRadius: 25,
             paddingLeft: 15,
-            paddingVertical: 4,
+            paddingVertical: 12,
             marginVertical: 2,
           }}
+          placeholder="Vietgangz@gmail.com or Vietgangz"
+          placeholderTextColor="gray"
         ></TextInput>
         <Text
           style={[
@@ -68,13 +68,14 @@ const SignIn = () => {
         <TextInput
           secureTextEntry={true}
           placeholder="**********"
+          placeholderTextColor="gray"
           style={{
             backgroundColor: Colors.font,
             color: "black",
             alignSelf: "stretch",
-            borderRadius: 18,
+            borderRadius: 25,
             paddingLeft: 15,
-            paddingVertical: 4,
+            paddingVertical: 12,
             marginVertical: 2,
           }}
         ></TextInput>
@@ -98,7 +99,7 @@ const SignIn = () => {
             Sign In
           </Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => router.push("./(auth)/forpass")}>
+        <TouchableOpacity onPress={() => router.push("./forpass")}>
           <Text style={[text.headerTitle, { fontSize: 14, paddingTop: 5 }]}>
             Forgot Password?
           </Text>

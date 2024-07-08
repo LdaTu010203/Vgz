@@ -1,42 +1,49 @@
-import {
-  View,
-  Text,
-  StyleSheet,
-  Image,
-  ActivityIndicator,
-  Button,
-} from "react-native";
-import React, { useState } from "react";
+import { View, Text, StyleSheet, Image } from "react-native";
+import React, { useEffect, useState } from "react";
 import { styles, text } from "@/constants/Styles";
-import { isLoading } from "expo-font";
-import { Colors } from "@/constants/Colors";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import SignIn from "./sign_in";
+const Stack = createStackNavigator();
 
-const index = () => {
-  const [isLoading, setIsLoading] = useState(false);
+const LoadingScreen = () => {
+  const [loading, setLoading] = useState(true);
 
-  const handleLoadData = () => {
-    setIsLoading(true);
-  };
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
 
-  return (
-    <View style={styles.containerIntro}>
-      <Image
-        source={require("@/assets/images/Logo.png")}
-        style={{
-          width: 400,
-          height: 400,
-        }}
-      />
-      <Text style={text.title}>VIETGANGZ</Text>
-      <Text style={text.infoTitle}>OfficialStore-VIETGANGZ</Text>
-      <Text style={text.infoTitle}>IG: vietgangz_original</Text>
-      {isLoading ? (
-        <ActivityIndicator size={"large"} color="#F1EFEF" />
-      ) : (
-        <Text></Text>
-      )}
-    </View>
-  );
+  if (loading) {
+    return (
+      <View style={styles.containerIntro}>
+        <Image
+          source={require("@/assets/images/Logo.png")}
+          style={{
+            width: 400,
+            height: 400,
+          }}
+        />
+        <Text style={text.title}>VIETGANGZ</Text>
+        <Text style={text.infoTitle}>OfficialStore-VIETGANGZ</Text>
+        <Text style={text.infoTitle}>IG: vietgangz_original</Text>
+        <Text style={text.infoTitle}>Đợi xíu nhe ní</Text>
+      </View>
+    );
+  } else {
+    return (
+      <NavigationContainer independent={true}>
+        <Stack.Navigator>
+          <Stack.Screen
+            name="sign_in"
+            component={SignIn}
+            options={{ headerShown: false }}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
+    );
+  }
 };
 
-export default index;
+export default LoadingScreen;

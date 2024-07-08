@@ -7,9 +7,9 @@ export const styles = StyleSheet.create({
     display: "flex",
     flex: 1,
     alignItems: "center",
-    justifyContent: "center",
     backgroundColor: Colors.background,
     padding: 10,
+    paddingTop: 35,
   },
   containerIntro: {
     flex: 1,
@@ -22,6 +22,11 @@ export const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
+  },
+  containerWelcome: {
+    display: "flex",
+    alignSelf: "flex-start",
+    paddingTop: 20,
   },
 });
 
@@ -38,6 +43,21 @@ export const text = StyleSheet.create({
     alignItems: "center",
     fontSize: 20,
     fontFamily: "PolyRegular",
+    paddingTop: 5,
+  },
+  headerTitle: {
+    color: Colors.fontTitle,
+    alignItems: "center",
+    fontSize: 30,
+    fontFamily: "PolyRegular",
+    paddingTop: 15,
+    paddingBottom: 25,
+  },
+  headerWelcome: {
+    color: Colors.fontTitle,
+    alignItems: "flex-start",
+    fontSize: 25,
+    fontFamily: "PolyItalic",
     paddingTop: 5,
   },
 });
